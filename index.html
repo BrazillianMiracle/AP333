@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reencontros de Esperança em Goiânia | Brazilian Miracle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <span class="material-symbols-outlined logo-icon">pets</span>
+                <h1>**RESCUE** GYN | **Brazilian Miracle**</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#lost" class="nav-link">Perdi Meu Pet</a></li>
+                    <li><a href="#found" class="nav-link">Encontrei Um Pet</a></li>
+                    <li><a href="#adotar" class="nav-link">Adotar um Amigo</a></li>
+                    <li><a href="#success" class="nav-link">Histórias de Sucesso</a></li>
+                    <li><a href="#shop" class="nav-link">Shop Pet</a></li>
+                </ul>
+            </nav>
+            <div class="user-area">
+                <button class="btn-action btn-login">LOGIN</button>
+                <button class="btn-action btn-cadastrar">CADASTRE-SE</button>
+                <button class="btn-google" title="Entrar com Google">
+                    <span class="material-symbols-outlined">g_mobiledata</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <section class="hero-banner">
+            <h2>Sua Conexão de Esperança em **Goiânia**.</h2>
+            <p>A maior rede de apoio para reunir pets perdidos e encontrados com suas famílias.</p>
+            <div class="action-buttons">
+                <a href="#lost" class="btn-cta primary">🚨 Reportar Pet Perdido</a>
+                <a href="#found" class="btn-cta secondary">✅ Reportar Pet Encontrado</a>
+            </div>
+        </section>
+
+        <section id="lost" class="content-section lost-pets">
+            <h3>Animais Desaparecidos (Perdidos)</h3>
+            <p class="section-subtitle">Estes pets estão esperando por seus tutores. Sua ajuda é vital!</p>
+            <div class="ad-grid">
+                <article class="ad-card perdido" data-pet-id="L-001">
+                    <div class="ad-header">
+                        <h3>🐶 Tobi - Poodle Toy</h3>
+                        <span class="status-tag tag-lost">PERDIDO</span>
+                    </div>
+                    <div class="ad-body">
+                        <img src="https://via.placeholder.com/300x200?text=Tobi+Poodle" alt="Tobi - Poodle Toy Perdido">
+                        <p>**Última Vista:** Setor Marista, 01/11/2025. Assustado, coleira vermelha. **Recompensa Alta!**</p>
+                    </div>
+                    <div class="ad-footer">
+                        <button class="btn-details">FALAR COM TUTOR</button>
+                    </div>
+                </article>
+                <article class="ad-card perdido" data-pet-id="L-002">
+                    <div class="ad-header">
+                        <h3>🐱 Luna - Gata Siamesa</h3>
+                        <span class="status-tag tag-lost">PERDIDA</span>
+                    </div>
+                    <div class="ad-body">
+                        <img src="https://via.placeholder.com/300x200?text=Luna+Siamesa" alt="Luna - Gata Siamesa Perdida">
+                        <p>**Desapareceu:** Jardim Goiás. Olhos azuis, chipada. Não costuma sair de casa.</p>
+                    </div>
+                    <div class="ad-footer">
+                        <button class="btn-details">FALAR COM TUTOR</button>
+                    </div>
+                </article>
+            </div>
+            <div class="load-more"><button class="btn-load-more" data-section="lost">Carregar Mais Perdidos</button></div>
+        </section>
+        
+        <section id="found" class="content-section found-pets">
+            <h3>Pets Encontrados (Achados)</h3>
+            <p class="section-subtitle">Estes animais foram resgatados. Eles podem ser o seu pet ou o de um vizinho!</p>
+            <div class="ad-grid">
+                <article class="ad-card encontrado" data-pet-id="F-001">
+                    <div class="ad-header">
+                        <h3>🐕 Cãozinho Dócil</h3>
+                        <span class="status-tag tag-found">ENCONTRADO</span>
+                    </div>
+                    <div class="ad-body">
+                        <img src="https://via.placeholder.com/300x200?text=Cachorro+Dócil+Achado" alt="Cachorro Vira-Lata Encontrado">
+                        <p>**Achado em:** Praça Tamandaré. Sem coleira, muito carinhoso. Porte médio. Buscamos o dono!</p>
+                    </div>
+                    <div class="ad-footer">
+                        <button class="btn-details">VER DETALHES</button>
+                    </div>
+                </article>
+            </div>
+            <div class="load-more"><button class="btn-load-more" data-section="found">Carregar Mais Encontrados</button></div>
+        </section>
+
+        <section id="adotar" class="content-section adoption-pets">
+            <h3>Adote e Transforme uma Vida</h3>
+            <p class="section-subtitle">Dê uma segunda chance! Eles esperam por um lar de amor e responsabilidade.</p>
+            <div class="ad-grid">
+                <article class="ad-card adocao" data-pet-id="A-001">
+                    <div class="ad-header">
+                        <h3>✨ Filhotes Vira-Latas (5)</h3>
+                        <span class="status-tag tag-adopt">ADOÇÃO</span>
+                    </div>
+                    <div class="ad-body">
+                        <img src="https://via.placeholder.com/300x200?text=Filhotes+Para+Adoção" alt="Filhotes Vira-Latas Adote">
+                        <p>**Idade:** 3 meses. Vermifugados e vacinados. Precisam ser adotados juntos ou separados.</p>
+                    </div>
+                    <div class="ad-footer">
+                        <button class="btn-details">CONHECER</button>
+                    </div>
+                </article>
+                <article class="ad-card adocao" data-pet-id="A-002">
+                    <div class="ad-header">
+                        <h3>👑 Princesa (Gata Persa)</h3>
+                        <span class="status-tag tag-adopt">ADOÇÃO</span>
+                    </div>
+                    <div class="ad-body">
+                        <img src="https://via.placeholder.com/300x200?text=Gata+Persa+Adote" alt="Gata Persa Adote">
+                        <p>**Perfil:** Adulta, castrada. Ideal para apartamentos. Adora carinho, um pouco reservada.</p>
+                    </div>
+                    <div class="ad-footer">
+                        <button class="btn-details">CONHECER</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section id="success" class="content-section success-stories">
+            <h3>❤️ Histórias de Sucesso **Brazilian Miracle**</h3>
+            <p class="section-subtitle">Inspiração! Veja as famílias que foram reunidas graças à nossa comunidade.</p>
+            <div class="success-grid">
+                <article class="success-card">
+                    <img src="https://via.placeholder.com/400x250?text=Reencontro+Feliz+1" alt="Foto Reencontro Tobi e Dono">
+                    <h4>O Milagre de Tobi</h4>
+                    <p>Após 15 longos dias, Tobi (o Poodle) foi reconhecido por uma vizinha graças ao nosso alerta na Vila Redenção. A emoção do reencontro foi indescritível!</p>
+                </article>
+                <article class="success-card">
+                    <img src="https://via.placeholder.com/400x250?text=Reencontro+Feliz+2" alt="Foto Reencontro Gato e Dono">
+                    <h4>Mimi e o Final Feliz</h4>
+                    <p>A gata Mimi foi encontrada a 5km de casa. O Pet FBI (nosso recurso de busca) fez o 'match' de fotos. Prova de que o esforço da comunidade vale a pena!</p>
+                </article>
+                <article class="success-card">
+                    <img src="https://via.placeholder.com/400x250?text=Reencontro+Feliz+3" alt="Foto Reencontro Max">
+                    <h4>Max Voltou para Casa</h4>
+                    <p>Max, o Labrador idoso, foi acolhido por um motorista de aplicativo que viu nosso cartaz digital. Ele voltou para sua família sã e salvo no Setor Bueno.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="shop" class="content-section pet-shopping">
+            <h3>🛒 Shopping Pet | Produtos Selecionados</h3>
+            <p class="section-subtitle">Tudo que seu pet precisa para viver feliz e seguro. Parte da renda reverte para a causa!</p>
+            <div class="ad-grid shop-grid">
+                <article class="ad-card shop-item">
+                    <div class="ad-body">
+                        <img src="https://via.placeholder.com/300x200?text=Coleira+Inteligente" alt="Coleira GPS para Pets">
+                        <h4>Coleira Rastreadora GPS</h4>
+                        <p>**Descrição:** Segurança máxima! Monitore seu pet em tempo real. Essencial após um reencontro.</p>
+                    </div>
+                    <div class="ad-footer">
+                        <a href="#" class="btn-details shop-btn">Comprar R$ 199,90</a>
+                    </div>
+                </article>
+                <article class="ad-card shop-item">
+                    <div class="ad-body">
+                        <img src="https://via.placeholder.com/300x200?text=Petisco+Saudavel" alt="Petiscos Naturais para Cães">
+                        <h4>Petiscos Naturais (Saúde)</h4>
+                        <p>**Descrição:** Recompensa de qualidade. 100% natural, sem conservantes artificiais. Seu pet merece!</p>
+                    </div>
+                    <div class="ad-footer">
+                        <a href="#" class="btn-details shop-btn">Comprar R$ 35,00</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Todos os Direitos Reservados a **BrazilianMiracle**. Juntos, Transformando Vidas em Goiânia.</p>
+            <div class="social-links">
+                <a href="#"><span class="material-symbols-outlined">mail</span></a>
+                <a href="#"><span class="material-symbols-outlined">share</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

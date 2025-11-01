@@ -1,0 +1,385 @@
+/* Importação da Fonte e do Ícone Google */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
+:root {
+    /* Cores de Esperança e Profissionalismo */
+    --color-primary-blue: #1976D2; /* Azul Forte, Ação */
+    --color-secondary-green: #DCE775; /* Verde Limão Suave - Alívio/Esperança */
+    --color-accent-hover: #1E88E5;
+    --color-text-dark: #263238; /* Tonalidade Escura Sólida */
+    --color-bg-light: #F4F6F9; /* Fundo Suave */
+    --color-footer: #FFB74D; /* Laranja Claro Profissional */
+
+    /* Tags de Status */
+    --tag-lost: #E53935; /* Vermelho Urgência */
+    --tag-found: #43A047; /* Verde Encontrado */
+    --tag-adopt: #3949AB; /* Azul Adoção */
+
+    /* Sombra e Transição */
+    --shadow-base: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 12px 25px rgba(0, 0, 0, 0.15);
+    --transition-fast: 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- CABEÇALHO (HIGH-END) --- */
+.main-header {
+    background-color: var(--color-primary-blue);
+    color: white;
+    padding: 10px 0;
+    box-shadow: var(--shadow-base);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-left: 5px;
+}
+
+.logo **strong** {
+    color: var(--color-secondary-green);
+    font-weight: 800;
+}
+
+.logo-icon {
+    font-size: 2em;
+    color: var(--color-secondary-green);
+}
+
+/* Navegação */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 15px 18px;
+    transition: background-color var(--transition-fast);
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Área do Usuário */
+.user-area {
+    display: flex;
+    align-items: center;
+}
+
+.btn-action {
+    padding: 8px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-login {
+    background-color: white;
+    color: var(--color-primary-blue);
+}
+
+.btn-cadastrar {
+    background-color: var(--color-secondary-green);
+    color: var(--color-text-dark);
+}
+
+.btn-login:hover, .btn-cadastrar:hover {
+    transform: scale(1.05);
+}
+
+.btn-google {
+    background: none;
+    border: none;
+    color: white;
+    padding: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1.8em;
+    transition: color var(--transition-fast);
+}
+
+.btn-google:hover {
+    color: var(--color-secondary-green);
+}
+
+/* --- BANNER PRINCIPAL (HERO) --- */
+.hero-banner {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: var(--shadow-base);
+}
+
+.hero-banner h2 {
+    font-size: 2.8em;
+    color: var(--color-text-dark);
+    font-weight: 800;
+}
+
+.hero-banner h2 **strong** {
+    color: var(--color-primary-blue);
+}
+
+.hero-banner p {
+    font-size: 1.2em;
+    color: #546E7A;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.action-buttons a {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 30px;
+    margin: 0 10px;
+    transition: transform var(--transition-fast), opacity var(--transition-fast);
+    display: inline-block;
+}
+
+.btn-cta.primary {
+    background-color: var(--tag-lost);
+    color: white;
+}
+
+.btn-cta.secondary {
+    background-color: var(--color-secondary-green);
+    color: var(--color-text-dark);
+    border: 2px solid var(--color-secondary-green);
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    opacity: 0.95;
+}
+
+/* --- SEÇÕES DE CONTEÚDO --- */
+.content-section {
+    padding: 50px 0;
+    border-top: 1px solid #E0E0E0;
+}
+
+.content-section h3 {
+    font-size: 2em;
+    color: var(--color-primary-blue);
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #78909C;
+    margin-bottom: 30px;
+}
+
+/* --- ESTRUTURA DOS ANÚNCIOS (GRID) --- */
+.ad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.ad-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-base);
+    border: 1px solid #E0E0E0;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transição Avançada */
+    display: flex;
+    flex-direction: column;
+}
+
+/* EFEITO HOVER AVANÇADO (3D Tilt Effect) */
+.ad-card:hover {
+    transform: translateY(-10px) rotateX(1deg) scale(1.02); /* Leve subida e inclinação sutil */
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-secondary-green);
+}
+
+.ad-header {
+    padding: 15px;
+    border-bottom: 1px solid #E0E0E0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ad-card.perdido .ad-header { background-color: #FFEBEE; } /* Tons Suaves */
+.ad-card.encontrado .ad-header { background-color: #E8F5E9; }
+.ad-card.adocao .ad-header { background-color: #E3F2FD; }
+
+.ad-header h3 {
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.status-tag {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: white;
+}
+
+.tag-lost { background-color: var(--tag-lost); }
+.tag-found { background-color: var(--tag-found); }
+.tag-adopt { background-color: var(--tag-adopt); }
+
+.ad-body {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.ad-body img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.ad-body h4 {
+    font-size: 1.3em;
+    color: var(--color-primary-blue);
+    margin-bottom: 5px;
+}
+
+.ad-body p {
+    font-size: 0.9em;
+    color: #616161;
+}
+
+.ad-footer {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #ECEFF1;
+}
+
+.btn-details {
+    background-color: var(--color-primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.btn-details:hover {
+    background-color: var(--color-accent-hover);
+}
+
+/* --- HISTÓRIAS DE SUCESSO --- */
+.success-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.success-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-base);
+}
+
+.success-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 3px solid var(--color-secondary-green);
+}
+
+.success-card h4 {
+    color: var(--color-text-dark);
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* --- SHOPPING PET --- */
+.shop-item .ad-header {
+    background-color: #FFFDE7;
+}
+
+.shop-btn {
+    background-color: #FF9800; /* Laranja para Venda */
+    font-size: 1.1em;
+    padding: 12px 30px;
+}
+
+.shop-btn:hover {
+    background-color: #FB8C00;
+}
+
+/* --- RODAPÉ --- */
+.main-footer {
+    background-color: var(--color-footer); /* Faixa Laranja Claro */
+    color: var(--color-text-dark);
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    color: var(--color-text-dark);
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.social-links a:hover {
+    color: var(--color-primary-blue);
+}
