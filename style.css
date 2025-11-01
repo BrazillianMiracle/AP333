@@ -1,26 +1,30 @@
-/* Importação da Fonte e do Ícone Google */
-@import url('https://fonts.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-@import url('https://fonts.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+/* Importação de Fontes e Ícones */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
 
+/* Variáveis CSS (Design System) */
 :root {
-    /* Cores de Esperança e Profissionalismo */
-    --color-primary-blue: #1976D2; /* Azul Forte, Ação */
-    --color-secondary-green: #DCE775; /* Verde Limão Suave - Alívio/Esperança */
-    --color-text-dark: #263238;
-    --color-bg-light: #F4F6F9;
-    --color-footer: #FFB74D; /* Laranja Claro Profissional */
+    --color-primary: #FF7043; /* Laranja Predominante (Cor de Ação/Comunidade) */
+    --color-primary-dark: #E64A19; /* Laranja Mais Escuro para Hover */
+    --color-secondary: #FFB74D; /* Laranja Claro (Esperança, Destaque) */
+    --color-text-dark: #333333; /* Texto Principal Escuro */
+    --color-text-light: #666666; /* Texto Secundário */
+    --color-background: #F8F8F8; /* Fundo Leve */
+    --color-white: #FFFFFF;
+    --color-border: #EEEEEE; /* Bordas Suaves */
+    --color-success: #66BB6A; /* Verde para Sucesso */
 
-    /* Tags de Status */
-    --tag-lost: #E53935;
-    --tag-found: #43A047;
-    --tag-adopt: #3949AB;
+    /* Sombras (Soft & Elevating) */
+    --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 5px 15px rgba(0, 0, 0, 0.12);
+    --shadow-large: 0 10px 30px rgba(0, 0, 0, 0.18);
 
-    /* Sombras Suaves (Soft Shadows) */
-    --shadow-base: 0 5px 15px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.20);
-    --transition-global: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* Transições */
+    --transition-ease: 0.3s ease-in-out;
+    --transition-bounce: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Efeito "saltitante" */
 }
 
+/* Base Global */
 * {
     margin: 0;
     padding: 0;
@@ -28,241 +32,43 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--color-text-dark);
-    background-color: var(--color-bg-light);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* --- BANNER SUPERIOR E NAVEGAÇÃO --- */
+/* --- CABEÇALHO SUPERIOR (FIXO) --- */
 .main-header {
-    /* ... (CSS mantido do bloco anterior para o header) ... */
-    background-color: var(--color-primary-blue);
-    color: white;
-    padding: 10px 0;
-    box-shadow: var(--shadow-base);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px 0;
+    box-shadow: var(--shadow-medium);
+    position: sticky; /* Fixo no topo */
+    top: 0;
+    z-index: 1000;
 }
 
-.nav-link, .btn-action, .btn-google {
-    transition: all var(--transition-global);
-}
-
-/* Efeito Hover na Navegação */
-.nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: var(--color-secondary-green);
-    transform: translateY(-2px);
-}
-
-.btn-action:hover {
-    transform: scale(1.05);
-}
-
-/* --- HERO SECTION REFINADA --- */
-.hero-section {
-    text-align: center;
-    padding: 80px 20px 60px;
-    background: linear-gradient(135deg, white 60%, #E3F2FD);
-    border-radius: 15px;
-    margin-top: 20px;
-    box-shadow: var(--shadow-hover); /* Mais proeminente */
-}
-
-.hero-text h2 {
-    font-size: 3.2em;
-    color: var(--color-text-dark);
-    font-weight: 800;
-}
-
-.hero-text p {
-    font-size: 1.25em;
-    color: #546E7A;
-    margin-top: 10px;
-    margin-bottom: 40px;
-}
-
-.hero-actions {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.btn-cta {
-    text-decoration: none;
-    font-weight: 700;
-    padding: 18px 40px;
-    border-radius: 40px;
-    transition: all var(--transition-global);
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.btn-cta.primary {
-    background-color: var(--tag-lost);
-    color: white;
-}
-
-.btn-cta.secondary {
-    background-color: var(--color-secondary-green);
-    color: var(--color-text-dark);
-    border: 2px solid var(--color-secondary-green);
-}
-
-/* Efeito Hover na CTA */
-.btn-cta:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    opacity: 0.95;
-}
-
-/* --- SEÇÕES DE CONTEÚDO E BOTÕES DE ADIÇÃO DE ANÚNCIO --- */
-.content-section {
-    padding: 50px 0;
-    border-top: none; /* Remoção da borda para visual mais limpo */
-}
-
-.btn-add-ad {
-    display: block;
-    width: 60%;
-    margin: 20px auto 40px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 700;
-    padding: 15px;
-    border-radius: 10px;
-    transition: all var(--transition-global);
-    box-shadow: var(--shadow-base);
-    color: white;
-    font-size: 1.1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.perdido-btn { background-color: var(--tag-lost); }
-.encontrado-btn { background-color: var(--tag-found); }
-.adocao-btn { background-color: var(--tag-adopt); }
-
-.btn-add-ad:hover {
-    transform: translateY(-4px) scale(1.01);
-    box-shadow: var(--shadow-hover);
-    filter: brightness(1.1);
-}
-
-
-/* --- ESTRUTURA DOS ANÚNCIOS (CAIXAS MAIS ELABORADAS) --- */
-.ad-card-enhanced {
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: var(--shadow-base);
-    border: 1px solid #E0E0E0;
-    transition: all var(--transition-global);
-    display: flex;
-    flex-direction: column;
-}
-
-/* EFEITO HOVER AVANÇADO (3D Tilt Effect + Borda Colorida) */
-.ad-card-enhanced:hover {
-    transform: translateY(-8px); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    border: 3px solid var(--color-secondary-green);
-}
-
-.ad-header {
-    padding: 15px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.ad-card-enhanced.perdido .ad-header { background-color: #FFEBEE; }
-.ad-card-enhanced.encontrado .ad-header { background-color: #E8F5E9; }
-.ad-card-enhanced.adocao .ad-header { background-color: #E3F2FD; }
-.ad-card-enhanced.shop-item .ad-header { background-color: #FFFDE7; }
-
-.status-tag {
-    font-size: 0.75em;
-    padding: 4px 10px;
-    border-radius: 5px;
-    color: var(--color-text-dark);
-    background-color: rgba(0, 0, 0, 0.05);
-    font-weight: 600;
-}
-
-.ad-body {
-    padding: 15px;
-    flex-grow: 1;
-}
-
-.ad-description {
-    font-size: 0.95em;
-    color: #455A64;
-    font-style: italic;
-    border-left: 3px solid var(--color-primary-blue);
-    padding-left: 10px;
-    margin-top: 10px;
-}
-
-.ad-description **strong** {
-    color: var(--tag-lost); /* Destaque na recompensa */
-    font-style: normal;
-}
-
-/* Botões de Detalhes - Hover Aprimorado */
-.btn-details {
-    transition: background-color var(--transition-global), transform 0.2s;
-}
-
-.btn-details:hover {
-    background-color: #1565C0;
-    transform: translateY(-2px);
-}
-
-/* Shop Button */
-.shop-btn {
-    background-color: #FF9800;
-}
-.shop-btn:hover {
-    background-color: #FB8C00;
-}
-
-/* Histórias de Sucesso */
-.story-card-enhanced {
-    padding: 25px;
-    transition: all var(--transition-global);
-    border-left: 5px solid var(--color-secondary-green);
-}
-
-.story-card-enhanced:hover {
-    transform: scale(1.03);
-    box-shadow: var(--shadow-hover);
-}
-
-/* --- RODAPÉ --- */
-.main-footer {
-    /* ... (CSS mantido do bloco anterior para o footer) ... */
-    background-color: var(--color-footer);
-    color: var(--color-text-dark);
-    padding: 20px 0;
-}
-
-.footer-content {
-    /* Efeito Hover nas Redes Sociais no Rodapé */
-    justify-content: space-between;
+.logo {
+    display: flex;
     align-items: center;
 }
-.social-links a:hover {
-    color: var(--color-primary-blue);
-    transform: scale(1.2);
-}
+
+.logo h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8em;
+    font-weight:
